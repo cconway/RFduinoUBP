@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UBP_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12Z-2N-bfM">
+                                <rect key="frame" x="277" y="79" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzE-R5-4aV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWE-WV-h6d">
+                                <rect key="frame" x="285" y="104" width="30.5" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEQ-Ct-ByR">
+                                <rect key="frame" x="257" y="187" width="85.5" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N / A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-zI-cU4">
+                                <rect key="frame" x="280" y="201" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Dn-zI-cU4" firstAttribute="centerX" secondItem="VEQ-Ct-ByR" secondAttribute="centerX" id="EcF-V4-ETo"/>
+                            <constraint firstItem="4Dn-zI-cU4" firstAttribute="top" secondItem="VEQ-Ct-ByR" secondAttribute="bottom" id="FvX-A3-oh8"/>
+                            <constraint firstAttribute="centerX" secondItem="VEQ-Ct-ByR" secondAttribute="centerX" id="GdN-AF-Ael"/>
+                            <constraint firstItem="VEQ-Ct-ByR" firstAttribute="top" secondItem="DWE-WV-h6d" secondAttribute="bottom" constant="68.5" id="KI0-Wq-10f"/>
+                            <constraint firstAttribute="centerX" secondItem="12Z-2N-bfM" secondAttribute="centerX" id="P9d-vt-cJm"/>
+                            <constraint firstItem="DWE-WV-h6d" firstAttribute="centerX" secondItem="12Z-2N-bfM" secondAttribute="centerX" id="Pty-Ei-bJC"/>
+                            <constraint firstItem="12Z-2N-bfM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="hSs-lp-Od0"/>
+                            <constraint firstItem="DWE-WV-h6d" firstAttribute="top" secondItem="12Z-2N-bfM" secondAttribute="bottom" constant="-5" id="huR-SE-bWY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="12Z-2N-bfM" id="rsZ-cf-Ahm"/>
+                        <outlet property="connectionStatusLabel" destination="DWE-WV-h6d" id="48n-NO-KBB"/>
+                        <outlet property="valueLabel" destination="4Dn-zI-cU4" id="pEH-8U-wB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="302"/>
+        </scene>
+    </scenes>
+</document>
